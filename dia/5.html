@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>San Valentín Interactivo</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      background: url(https://img.freepik.com/fotos-premium/fondo-san-valentin-pinzas-madera-corazon-sobre-fondo-rosa-concepto-san-valentin-tumbona-plana-vista-superior-espacio-copia_88526-1067.jpg?semt=ais_hybrid);
+      background-size: cover;
+      background-attachment: fixed;
+      color: white;
+      overflow: auto; /* Permitir desplazamiento */
+      position: relative;
+    }
+
+    .container {
+      margin-top: 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: bold;
+      color: #FF6347;
+      text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .heart-container {
+      margin-top: 80px; /* Más espacio para que no tape el título */
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+    }
+
+    .heart {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background-color: pink;
+      transform: rotate(-45deg);
+      animation: pulse 0.5s infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -75px;
+      left: 0;
+    }
+
+    .heart::after {
+      top: 0;
+      left: 75px;
+    }
+
+    .message {
+      margin: 30px auto;
+      padding: 20px;
+      max-width: 800px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: black;
+      font-weight: bold;
+      text-align: left;
+      animation: fadeIn 2s ease-in-out;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 15px;
+    }
+
+    .message p {
+      margin-bottom: 15px;
+    }
+
+    .question {
+      font-size: 36px;
+      font-weight: bold;
+      color: #FFD700;
+      text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+      animation: fadeIn 2s ease-in-out;
+      margin-top: 40px;
+    }
+
+    .buttons button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .yes {
+      background-color: #ff4081;
+      color: white;
+      box-shadow: 0 4px 20px rgba(255, 64, 129, 0.5);
+    }
+
+    .no {
+      background-color: #ffcccb;
+      color: black;
+      box-shadow: 0 4px 20px rgba(255, 204, 203, 0.5);
+      position: absolute;
+    }
+
+    .yes:hover {
+      transform: scale(1.15);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Un mensaje especial para ti...</h1>
+
+    <div class="heart-container">
+      <div class="heart"></div>
+    </div>
+
+    <div class="message">
+      <p>A ti, madre mía</p>
+      <p>En el alba callada del tiempo primero,<br>
+      cuando el mundo aún duerme en su manto de cielo,<br>
+      tus manos despiertan, sin queja ni ruego,<br>
+      y en tu rostro amanece la luz del sosiego.</p>
+      <p>Eres canto y abrigo, ternura y coraje,<br>
+      el faro encendido en mitad del oleaje.<br>
+      Eres la historia que nunca se olvida,<br>
+      la raíz más profunda que da forma a la vida.</p>
+      <p>Fuiste cuna y camino, refugio y frontera,<br>
+      fuiste noche sin sueño, labor verdadera.<br>
+      Te hiciste silencio para ser mi canción,<br>
+      te hiciste de piedra para darme corazón.</p>
+      <p>Tu voz fue mi guía en las horas oscuras,<br>
+      tu risa mi escudo, tus besos ternura.<br>
+      Fuiste madre en el alma, sin pausa ni duda,<br>
+      como el río que fluye, como el sol que no muda.</p>
+      <p>Con tus manos cosiste mi abrigo invisible,<br>
+      y en tus ojos hallé mi refugio posible.<br>
+      Cada paso que di, cada lucha ganada,<br>
+      tu sombra me dio la fuerza esperada.</p>
+      <p>Fuiste maestra sin libros ni letras,<br>
+      me enseñaste a volar con las alas abiertas.<br>
+      Si caí, tú estuviste, si dudé, tú creíste,<br>
+      si temí, me abrazaste, si partí, me seguiste.</p>
+      <p>Hoy levanto mi canto, lo alzo al cielo claro,<br>
+      por tu vida sin pausa, por tu amor sin reparo.<br>
+      Por las noches en vela, por tus sueños postergados,<br>
+      por tus días cansados y tus brazos entregados.</p>
+      <p>No hay palabra que encierre tu ser tan profundo,<br>
+      ni homenaje que alcance a abrazar tu mundo.<br>
+      Solo sé que sin ti no sería quien soy,<br>
+      que tu amor es mi casa, mi estrella, mi sol.</p>
+      <p>Gracias, madre mía, por ser siempre vida,<br>
+      por tu amor que no exige, por tu alma rendida.<br>
+      Que este día sea poco, que el homenaje no baste,<br>
+      porque el amor de una madre… es eterno y es grande.</p>
+    </div>
+</html>
